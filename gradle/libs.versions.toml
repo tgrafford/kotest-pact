@@ -1,0 +1,15 @@
+[versions]
+kotest = "6.0.3"
+kotlin = "2.2.20"
+kotlin-coroutines = "1.10.2"
+pact = "4.6.17"
+
+[libraries]
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-framework = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+pact-consumer = { module = "au.com.dius.pact.consumer:kotlin", version.ref = "pact" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotest = { id = "io.kotest", version.ref = "kotest" }
