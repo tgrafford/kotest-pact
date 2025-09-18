@@ -12,3 +12,6 @@ target
 
 # Ignore kotlin session files
 .kotlin
+
+# Ignore Qodo generated files
+.qodo
