@@ -38,7 +38,7 @@ jobs:
           version="${{ github.event.release.tag_name }}"
           version="${version,,}"
           version="${version#v}"
-          sed -i -e 's/version=.+/version=${version}' "${{ github.workspace }}/gradle.properties"
+          sed -i -e "s/^version=.*/version=${version}/" "${{ github.workspace }}/gradle.properties"
 
       - name: 🔨 Build with Gradle
         run: ./gradlew build -x test
